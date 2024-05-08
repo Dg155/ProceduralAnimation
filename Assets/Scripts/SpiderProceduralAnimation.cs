@@ -64,16 +64,23 @@ public class SpiderProceduralAnimation : MonoBehaviour
     // Helper function to smoothly lerp specified leg to targetPoint
     IEnumerator PerformStep(int index, Vector3 targetPoint)
     {
-        Vector3 startPos = lastLegPositions[index];
-        for(int i = 1; i <= smoothness; ++i)
-        {
-            legTargets[index].position = Vector3.Lerp(startPos, targetPoint, i / (float)(smoothness + 1f));
-            legTargets[index].position += transform.up * Mathf.Sin(i / (float)(smoothness + 1f) * Mathf.PI) * stepHeight; // Add some height to mimic natural walking
-            yield return new WaitForFixedUpdate();
-        }
-        legTargets[index].position = targetPoint;
-        lastLegPositions[index] = legTargets[index].position;
-        legMoving[0] = false;
+        // Get the start position using index and lastLegPositions
+        
+        // Iterate from 1-smoothness
+        
+            // Lerp the leg to the targetPoint using the smoothness
+            
+            // Add some height to mimic natural walking
+            
+            // Wait for the next fixed update
+            
+        
+        // Set the position to final target point
+        
+        // Update the lastLegPositions index
+        
+        // Set the legMoving to false
+        
     }
 
 
