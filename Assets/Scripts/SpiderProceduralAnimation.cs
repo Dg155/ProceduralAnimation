@@ -80,6 +80,7 @@ public class SpiderProceduralAnimation : MonoBehaviour
         // Update the lastLegPositions index
         
         // Set the legMoving to false
+        yield return null;
         
     }
 
