@@ -67,21 +67,20 @@ public class SpiderProceduralAnimation : MonoBehaviour
         // Get the start position using index and lastLegPositions
         
         // Iterate from 1-smoothness
-        
+        for (int i = 1; i<= smoothness; i++)
+        {
             // Lerp the leg to the targetPoint using the smoothness
-            
             // Add some height to mimic natural walking
-            
+            legTargets[index].position += transform.up * Mathf.Sin(i / (float)(smoothness + 1f) * Mathf.PI) * stepHeight;
             // Wait for the next fixed update
-            
-        
-        // Set the position to final target point
-        
-        // Update the lastLegPositions index
-        
-        // Set the legMoving to false
-        yield return null;
-        
+            yield return new WaitForFixedUpdate();
+        }
+        // Set the leg target position to final target point
+
+        // Update the lastLegPositions index to the new leg target target position
+
+        // Set the legMoving (index 0) to false
+
     }
 
 
